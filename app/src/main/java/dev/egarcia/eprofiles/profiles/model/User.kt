@@ -18,3 +18,7 @@ data class User(
     @SerializedName("photo")
     val photo: String?
 )
+
+fun User.isValidResponse() : Boolean {
+    return id != null && name != null
+}
